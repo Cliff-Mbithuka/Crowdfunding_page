@@ -17,6 +17,13 @@ body {
   font-family: "Commissioner", sans-serif;
   display: flex;
   justify-content: center;
+  background-color: rgb(253, 250, 246);
+}
+button{
+    padding: 15px 25px;
+    border-radius: 40px;
+    color: white;
+    border: transparent;
 }
 
 /*------------Background-image--------*/
@@ -54,25 +61,25 @@ object-fit: cover;
 }
 
 .wrapper{
-    background-color: red;
     align-items: center;
     text-align: center;
     max-width: 650px;
     width: 100%;
     margin: auto;
     padding: 10px;
-    margin-top: 200px;
+    margin-top: 180px;
 }
 .box{
     max-width: 600px;
     width: 100%;
     margin: 10px auto;
-    background-color: green;
+    background-color: white;
     padding: 20px;
+    border-radius: 5px;
 }
-/* .box p{
+.box p{
     color: var(--Dark-gray);
-} */
+}
 .box hr{
     border: solid 1px var(--Dark-gray);
 }
@@ -81,10 +88,11 @@ object-fit: cover;
     justify-content: space-between;
    padding: 10px;
 }
-.direction button{
-    padding: 15px 25px;
-   
-    border-radius: 40px;
+ .top{
+    background-color: var(--Moderate-cyan);
+}
+.bottom{
+    background-color: rgb(166, 165, 165);
 }
 .two {
     display: flex;
@@ -110,7 +118,29 @@ object-fit: cover;
 .thin div{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 } 
+.thin p{
+    color: var(--Moderate-cyan);
+}
+.third div p{
+    opacity: 0.5;
+}
 .second{
     margin: 10px 0;
+}
+.remain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.remain span { 
+    margin-left: 5px;
+}
+.first button, .second button{
+    background-color: var(--Moderate-cyan);
+}
+.third button {
+    background-color:  var(--Dark-gray);
+    color: white;
 }
