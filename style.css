@@ -19,12 +19,12 @@ body {
   justify-content: center;
   background-color: rgb(253, 250, 246);
 }
-button{
+/* button{
     padding: 15px 25px;
     border-radius: 40px;
     color: white;
     border: transparent;
-}
+} */
 
 /*------------Background-image--------*/
 .background-image{
@@ -68,11 +68,12 @@ object-fit: cover;
     margin: auto;
     padding: 10px;
     margin-top: 180px;
+   
 }
 .box{
     max-width: 600px;
     width: 100%;
-    margin: 10px auto;
+    margin: 20px auto;
     background-color: white;
     padding: 20px;
     border-radius: 5px;
@@ -87,21 +88,57 @@ object-fit: cover;
     display: flex;
     justify-content: space-between;
    padding: 10px;
+   margin-top: 20px;
+}
+.direction button{
+    height: 40px;
+    border-radius: 30px;
+    border: transparent;
+    color: white;
 }
  .top{
     background-color: var(--Moderate-cyan);
+     padding: 10px;
+    
 }
 .bottom{
     background-color: rgb(166, 165, 165);
+    margin-left: 10px;
 }
+.bottom span{
+    margin-right: 10px;
+}
+button img {
+    margin-right: 5px; 
+    vertical-align: middle; 
+    width: auto;
+    height: 100%; 
+  }
+
 .two {
-    display: flex;
-    justify-content: space-around;
-}
-.two div {
     display: flex;
     flex-direction: column;
 }
+.update {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+.progress-bar progress {
+    width: 100%;
+    height: 10px;
+    background-color: #ddd; 
+    border-radius: 10px;
+}
+.progress-bar progress::-webkit-progress-bar {
+    background-color: #ddd; 
+    border-radius: 10px; 
+  }
+.progress-bar progress::-webkit-progress-value {
+    background-color: var(--Moderate-cyan);
+    border-radius: 10px; 
+  }
 .three{
     align-items: start;
     text-align: left;
@@ -111,7 +148,7 @@ object-fit: cover;
     margin: 20px 0 ;
 }
 .thin{
-    border: solid 1px white;
+    border: solid 1px var(--Dark-gray);
     padding: 15px;
     border-radius: 10px;
 }
@@ -120,14 +157,20 @@ object-fit: cover;
     justify-content: space-between;
     align-items: center;
 } 
-.thin p{
-    color: var(--Moderate-cyan);
+.thin button{
+    padding: 10px 20px;
+    border-radius: 40px;
+    color: white;
+    border: transparent;
 }
-.third div p{
+.edition p{
+    color: var(--Moderate-cyan)
+}
+.third{
     opacity: 0.5;
 }
 .second{
-    margin: 10px 0;
+    margin: 20px 0;
 }
 .remain{
     display: flex;
