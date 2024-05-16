@@ -6,10 +6,10 @@
   --Black: hsl(0, 0%, 0%);
   --Dark-gray: hsl(0, 0%, 48%);
 }
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -19,171 +19,304 @@ body {
   justify-content: center;
   background-color: rgb(253, 250, 246);
 }
-/* button{
-    padding: 15px 25px;
-    border-radius: 40px;
-    color: white;
-    border: transparent;
-} */
 
 /*------------Background-image--------*/
-.background-image{
-    position: absolute;
-   top: 0;
-    left: 0;
-    right: 0;
-    height: 350px;
-    z-index: -1;
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 350px;
+  z-index: -1;
 }
 
-.background-image img{
-width: 100%;
-height: 100%;
-object-fit: cover;
+.background-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.container{
-    width: 100%;
-    margin: 70px 10px;
-    max-width: 1000px;
-    /* background-color: yellow; */
+.container {
+  width: 100%;
+  margin: 70px 10px;
+  max-width: 1000px;
+  /* background-color: yellow; */
 }
 /*-------Header------*/
-.header{
-    display: flex;
-    justify-content: space-between;
+.header {
+  display: flex;
+  justify-content: space-between;
 }
- .header .menu ul li {
-    list-style: none;
-    display: inline-block;
-    padding: 10px;
-    color: white; 
+.header .menu ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 10px;
+  cursor: pointer;
+}
+.menu ul li a {
+  text-decoration: none;
+  color: white;
+}
+.menu ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  display: block;
+  background-color: var(--Dark-gray);
+  margin: auto;
+  transform: 0.5s;
+  cursor: pointer;
+}
+.menu ul li:hover::after {
+  width: 100%;
 }
 
-.wrapper{
-    align-items: center;
-    text-align: center;
-    max-width: 650px;
-    width: 100%;
-    margin: auto;
-    padding: 10px;
-    margin-top: 180px;
-   
+/*---- wrapper-------*/
+.wrapper {
+  align-items: center;
+  text-align: center;
+  max-width: 650px;
+  width: 100%;
+  margin: auto;
+  padding: 10px;
+  margin-top: 180px;
 }
-.box{
-    max-width: 600px;
-    width: 100%;
-    margin: 20px auto;
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
+.box {
+  max-width: 600px;
+  width: 100%;
+  margin: 20px auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
 }
-.box p{
-    color: var(--Dark-gray);
+.box p {
+  color: var(--Dark-gray);
 }
-.box hr{
-    border: solid 1px var(--Dark-gray);
+.box hr {
+  border: solid 1px var(--Dark-gray);
 }
-.direction{
-    display: flex;
-    justify-content: space-between;
-   padding: 10px;
-   margin-top: 20px;
+.one {
+  position: relative;
 }
-.direction button{
-    height: 40px;
-    border-radius: 30px;
-    border: transparent;
-    color: white;
+.craft {
+  margin-bottom: 20px;
 }
- .top{
-    background-color: var(--Moderate-cyan);
-     padding: 10px;
-    
+.craft img {
+  position: absolute;
+  top: -30px;
+  transform: translateX(-50%);
 }
-.bottom{
-    background-color: rgb(166, 165, 165);
-    margin-left: 10px;
+.direction {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin-top: 20px;
 }
-.bottom span{
-    margin-right: 10px;
+.direction button {
+  height: 40px;
+  border-radius: 30px;
+  border: transparent;
+  color: white;
+}
+.top {
+  background-color: var(--Moderate-cyan);
+  padding: 10px;
+  transition: 0.5s;
+}
+.top:hover {
+  background-color: var(--Dark-cyan);
+  cursor: pointer;
+}
+.bottom {
+  background-color: rgb(166, 165, 165);
+  margin-left: 10px;
+}
+.bottom span {
+  margin-right: 10px;
 }
 button img {
-    margin-right: 5px; 
-    vertical-align: middle; 
-    width: auto;
-    height: 100%; 
-  }
+  margin-right: 5px;
+  vertical-align: middle;
+  width: auto;
+  height: 100%;
+}
 
 .two {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 .update {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    margin-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  margin-bottom: 20px;
 }
 .progress-bar progress {
-    width: 100%;
-    height: 10px;
-    background-color: #ddd; 
-    border-radius: 10px;
+  width: 100%;
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 10px;
 }
 .progress-bar progress::-webkit-progress-bar {
-    background-color: #ddd; 
-    border-radius: 10px; 
-  }
+  background-color: #ddd;
+  border-radius: 10px;
+}
 .progress-bar progress::-webkit-progress-value {
-    background-color: var(--Moderate-cyan);
-    border-radius: 10px; 
+  background-color: var(--Moderate-cyan);
+  border-radius: 10px;
+}
+.three {
+  align-items: start;
+  text-align: left;
+  padding: 15px;
+}
+.three p {
+  margin: 20px 0;
+}
+.thin {
+  border: solid 1px var(--Dark-gray);
+  padding: 15px;
+  border-radius: 10px;
+}
+.thin div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.thin button {
+  padding: 10px 20px;
+  border-radius: 40px;
+  color: white;
+  border: transparent;
+}
+.edition p {
+  color: var(--Moderate-cyan);
+}
+.third {
+  opacity: 0.5;
+}
+.second {
+  margin: 20px 0;
+}
+.remain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.remain span {
+  margin-left: 5px;
+}
+.first button,
+.second button {
+  background-color: var(--Moderate-cyan);
+  transition: 0.5s;
+}
+.first button:hover,
+.second button:hover {
+  background-color: var(--Dark-cyan);
+  cursor: pointer;
+}
+.third button {
+  background-color: var(--Dark-gray);
+  color: white;
+}
+
+/* modal */
+.modal {
+    /* display: none; */
+    position: fixed;
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
   }
-.three{
-    align-items: start;
-    text-align: left;
-    padding: 15px;
+  .modal-wrapper {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; 
+    border-radius: 5px;
+  }
+.modal-wrapper p {
+  margin: 15px 0;
+  color: var(--Dark-gray);
 }
-.three p{
-    margin: 20px 0 ;
+.close-icon {
+  float: right;
+  cursor: pointer;
 }
-.thin{
-    border: solid 1px var(--Dark-gray);
-    padding: 15px;
-    border-radius: 10px;
+.pledge {
+    display: flex;
+  padding: 20px;
+  border: solid 1px var(--Dark-gray);
+  border-radius: 5px;
+  margin-bottom: 10px;
+  transition: 0.5s;
 }
-.thin div{
+.pledge:hover{
+    cursor: pointer;
+    border: solid 2px var(--Dark-cyan);
+}
+.left{
+    margin-left: 20px;
+}
+.upper{
+display: flex;
+}
+.remain-modal{
+    display: flex;
+}
+.remain-modal h5{
+    margin-left: 10px;
+    color: var(--Moderate-cyan);
+font-weight: bold;
+}
+.remain-modal span{
+    margin-left: 10px;
+}
+.centre{
+    margin-left: 20px;
+}
+.box-three{
+    flex-direction: column;
+}
+.below{
     display: flex;
     justify-content: space-between;
     align-items: center;
-} 
-.thin button{
-    padding: 10px 20px;
-    border-radius: 40px;
+}
+.below button{
+padding: 15px;
+border-radius: 40px;
+margin-top: 15px;
+border: none;
+color: var(--Dark-gray);
+transition: 0.5s;
+}
+.below button span{
+    margin-left: 10px;
+    color: var(--Black);
+    font-weight: bold;
+}
+.below button:hover{
+    cursor: pointer;
+    border: solid 2px var(--Moderate-cyan);
+}
+.Continue{
+    margin-left: 10px;
+    transition: 0.5s;
+}
+.Continue:hover{
+    background-color: var(--Dark-cyan);
     color: white;
-    border: transparent;
+    border: none;
 }
-.edition p{
-    color: var(--Moderate-cyan)
-}
-.third{
-    opacity: 0.5;
-}
-.second{
-    margin: 20px 0;
-}
-.remain{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.remain span { 
-    margin-left: 5px;
-}
-.first button, .second button{
-    background-color: var(--Moderate-cyan);
-}
-.third button {
-    background-color:  var(--Dark-gray);
-    color: white;
+
+.box-four{
+    opacity: 0.3;
 }
