@@ -12,7 +12,7 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="style.css" />
-    <title>Frontend Mentor | Crowdfunding product page</title>
+    <title>Crowdfunding product page</title>
   </head>
   <body>
     <div class="background-image">
@@ -36,7 +36,6 @@
           <div class="craft">
             <img src="images/logo-mastercraft.svg" alt="" />
           </div>
-
           <h2>Mastercraft Bamboo Monitor Riser</h2>
           <p>
             A beautiful & handcrafted monitor stand to reduce neck and eye
@@ -45,7 +44,9 @@
           <div class="direction">
             <button class="top" id="openModal">Back this project</button>
             <button class="bottom">
-              <img src="images/icon-bookmark.svg" alt="" /><span>Bookmark</span>
+              <img src="images/icon-bookmark.svg" alt="" /><span
+                >Bookmarked</span
+              >
             </button>
           </div>
         </div>
@@ -94,7 +95,7 @@
               us launch our promotional campaign, and you’ll be added to a
               special Backer member list.
             </p>
-            <div>
+            <div class="number">
               <div class="remain">
                 <h1>101</h1>
                 <span>left</span>
@@ -112,7 +113,7 @@
               thank you. You’ll be added to our Backer member list. Shipping is
               included.
             </p>
-            <div>
+            <div class="number">
               <div class="remain">
                 <h1>64</h1>
                 <span>left</span>
@@ -130,7 +131,7 @@
               a personal thank you. You’ll be added to our Backer member list.
               Shipping is included.
             </p>
-            <div>
+            <div class="number">
               <div class="remain">
                 <h1>0</h1>
                 <span>left</span>
@@ -155,7 +156,13 @@
         <div class="pledge-box">
           <div class="pledge box-one">
             <div>
-              <input id="" type="radio" name="account-type" class="inline" />
+              <label for="account"
+                ><input
+                  id="account"
+                  type="radio"
+                  name="account-type"
+                  class="inline"
+              /></label>
             </div>
             <div class="left">
               <h4>Pledge with no reward</h4>
@@ -168,20 +175,26 @@
           </div>
           <div class="pledge box-two">
             <div class="upper">
-              <div>
-                <input id="" type="radio" name="account-type" class="inline" />
-              </div>
-              <div class="centre">
-                <div class="remain-modal">
+              <div class="label">
+                <label for="account"
+                  ><input
+                    id="account"
+                    type="radio"
+                    name="account-type"
+                    class="inline"
+                /></label>
+
+                <div class="remain-modal special">
                   <h4>Bamboo Stand</h4>
                   <h5>Pledge $25 or more</h5>
                 </div>
-                <p>
-                  You get an ergonomic stand made of natural bamboo. You've
-                  helped us launch our promotional campaign, and you’ll be added
-                  to a special Backer member list.
-                </p>
               </div>
+              <p>
+                You get an ergonomic stand made of natural bamboo. You've helped
+                us launch our promotional campaign, and you’ll be added to a
+                special Backer member list.
+              </p>
+
               <div class="remain-modal">
                 <h4>101</h4>
                 <span>left</span>
@@ -191,20 +204,26 @@
           </div>
           <div class="pledge box-three">
             <div class="upper">
-              <div>
-                <input id="" type="radio" name="account-type" class="inline" />
-              </div>
-              <div class="centre">
-                <div class="remain-modal">
+              <div class="label">
+                <label for="account"
+                  ><input
+                    id="account"
+                    type="radio"
+                    name="account-type"
+                    class="inline"
+                /></label>
+
+                <div class="remain-modal special">
                   <h4>Black Edition Stand</h4>
                   <h5>Pledge $75 or more</h5>
                 </div>
-                <p>
-                  You get a Black Special Edition computer stand and a personal
-                  thank you. You’ll be added to our Backer member list. Shipping
-                  is included.
-                </p>
               </div>
+              <p>
+                You get a Black Special Edition computer stand and a personal
+                thank you. You’ll be added to our Backer member list. Shipping
+                is included.
+              </p>
+
               <div class="remain-modal">
                 <h4>64</h4>
                 <span>left</span>
@@ -213,29 +232,35 @@
             <hr />
             <div class="below">
               <div><p>Enter Your Pledge</p></div>
-              <div>
+              <div class="btn">
                 <button>$ <span>25 </span></button>
-                <button class="Continue">Continue</button>
+                <button class="Continue" id="openThankYouBtn">Continue</button>
               </div>
             </div>
           </div>
 
           <div class="pledge box-four">
             <div class="upper">
-              <div>
-                <input id="" type="radio" name="account-type" class="inline" />
-              </div>
-              <div class="centre">
-                <div class="remain-modal">
+              <div class="label">
+                <label for="account"
+                  ><input
+                    id="account"
+                    type="radio"
+                    name="account-type"
+                    class="inline"
+                /></label>
+
+                <div class="remain-modal special">
                   <h4>Mahogany Special Edition</h4>
                   <h5>Pledge $25 or more</h5>
                 </div>
-                <p>
-                  You get two Special Edition Mahogany stands, a Backer T-Shirt,
-                  and a personal thank you. You’ll be added to our Backer member
-                  list. Shipping is included.
-                </p>
               </div>
+              <p>
+                You get two Special Edition Mahogany stands, a Backer T-Shirt,
+                and a personal thank you. You’ll be added to our Backer member
+                list. Shipping is included.
+              </p>
+
               <div class="remain-modal">
                 <h4>0</h4>
                 <span>left</span>
@@ -243,6 +268,18 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+
+    <div id="thankYouPage" class="thank-you">
+      <div class="thank-you-content">
+        <img src="images/icon-check.svg" alt="" />
+        <h2>Thanks For Your Support</h2>
+        <p>
+          Your Pledge brings us one step closer to sharing Mastercraft Bamboo
+          Riser Worldwide. You will get an Email once the campain is completed
+        </p>
+        <button id="closeThankYouBtn">Got it!</button>
       </div>
     </div>
     <script src="index.js"></script>
