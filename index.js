@@ -5,6 +5,9 @@ const openModal = document.getElementById('openModal');
  const closeThankYouBtn = document.getElementById("closeThankYouBtn");
 const openThankYouBtn = document.getElementById("openThankYouBtn");
 const pledge = document.getElementsByClassName('pledge');
+const closeMenu = document.getElementById("closeMenu");
+const menuToggle = document.getElementById("menuToggle");
+const sideMenu = document.getElementById('sidemenu')
 
 openModal.onclick = function() {
     modal.style.display = "block";
@@ -25,5 +28,14 @@ openModal.onclick = function() {
     thankYouPage.style.display = "none";
     document.body.classList.remove('fixed');
   }
+
+ //menu
+ menuToggle.addEventListener("click", () => {
+  sideMenu.classList.add("open");
+ });
+ closeMenu.addEventListener("click", () => {
+  sideMenu.classList.remove("open");
+});
+
 
  

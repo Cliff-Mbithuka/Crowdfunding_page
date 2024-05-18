@@ -33,7 +33,12 @@ body.fixed {
   height: 350px;
   z-index: -1;
 }
-
+.mobile{
+  display: none;
+}
+.desktop{
+  display: block;
+}
 .background-image img {
   width: 100%;
   height: 100%;
@@ -42,16 +47,17 @@ body.fixed {
 
 .container {
   width: 100%;
-  margin: 70px 10px;
-  max-width: 1000px;
+  margin: 45px 0;
+  max-width: 1100px;
   
 }
 /*-------Header------*/
 .header {
   display: flex;
   justify-content: space-between;
+  margin: 0 10px;
 }
-.header .menu ul li {
+.menu ul li {
   list-style: none;
   display: inline-block;
   padding: 10px;
@@ -60,6 +66,7 @@ body.fixed {
 .menu ul li a {
   text-decoration: none;
   color: white;
+  display: inline-block;
 }
 .menu ul li::after {
   content: "";
@@ -73,6 +80,9 @@ body.fixed {
 }
 .menu ul li:hover::after {
   width: 100%;
+}
+.open, .close{
+  display: none;
 }
 
 /*---- wrapper-------*/
@@ -184,18 +194,13 @@ button img:hover{
   text-align: left;
   padding: 15px;
 }
-.three p {
+/* .three p {
   margin: 20px 0;
-}
+} */
 .thin {
   border: solid 1px var(--Dark-gray);
-  padding: 15px;
+  padding: 10px;
   border-radius: 10px;
-}
-.thin div {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 .thin button {
   padding: 10px 20px;
@@ -203,8 +208,16 @@ button img:hover{
   color: white;
   border: transparent;
 }
+.edition{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
 .edition p {
   color: var(--Moderate-cyan);
+}
+.first{
+  margin-top: 15px;
 }
 .third {
   opacity: 0.5;
@@ -212,14 +225,13 @@ button img:hover{
 .second {
   margin: 20px 0;
 }
-.remain {
+ .remain {
   display: flex;
-  justify-content: center;
   align-items: center;
-}
+} 
 .remain span {
-  margin-left: 5px;
-}
+  margin-left: 10px;
+} 
 .first button,
 .second button {
   background-color: var(--Moderate-cyan);
@@ -233,6 +245,11 @@ button img:hover{
 .third button {
   background-color: var(--Dark-gray);
   color: white;
+}
+.number{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
 }
 
 /* modal */
@@ -294,7 +311,7 @@ button img:hover{
   cursor: pointer;
 }
 .pledge {
-    display: flex;
+    /* display: flex; */
   padding: 20px;
   border: solid 1px var(--Dark-gray);
   border-radius: 5px;
@@ -306,7 +323,11 @@ button img:hover{
     border: solid 2px var(--Dark-cyan);
 }
 .left{
-    margin-left: 20px;
+    /* margin-left: 20px; */
+    display: flex;
+}
+.left h4{
+  margin-left: 10px;
 }
 .left h4:hover{
   color: var(--Moderate-cyan);
@@ -314,20 +335,27 @@ cursor: pointer;
 }
 .upper{
 display: flex;
+flex-direction:  column;
 }
 .label{
   display: flex;
+  align-items: center;
 }
 .remain-modal{
     display: flex;
-
+    
 }
+.special{
+  margin-left: 10px;
+  flex-direction: column;
+}
+
 .remain-modal h4:hover{
 color: var(--Moderate-cyan);
 cursor: pointer;
 }
 .remain-modal h5{
-    margin-left: 10px;
+    margin-top: 5px;
     color: var(--Moderate-cyan);
 font-weight: bold;
 }
@@ -341,12 +369,15 @@ font-weight: bold;
     flex-direction: column;
 }
 .below{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  margin-top: 2em;
+    /* display: flex;
+    flex-direction: row; */
+    /* justify-content: space-between;
+    align-items: center; */
 }
+
 .below button{
-  
+ 
 padding: 10px;
 border-radius: 40px;
 margin-top: 15px;
@@ -357,6 +388,7 @@ transition: 0.5s;
 }
 .btn{
   display: flex;
+  justify-content: space-between;
 }
 .below button span{
     margin-left: 10px;
@@ -384,16 +416,57 @@ transition: 0.5s;
 
 @media (max-width: 768px) {
   .background-image{
-    height: 150px
+    height: 250px
+  }
+  .mobile{
+    display: block;
+  }
+  .desktop{
+    display: none;
   }
   .container{
-    margin-top: 10px ;
+    margin-top: 2em ;
+    
   }
+
+  /*-------menu-----------*/
+  .menu ul li{
+    display: block;
+   
+  }
+  .menu ul li a {
+    color: var(--Dark-gray);
+  }
+  .open, .close{
+    display: block;
+    cursor: pointer;
+    margin: 10px;
+    float: right;
+  }
+
   .menu{
-    display: none
+    width: 150px;
+    height: 150px;
+    position: fixed;
+  
+    font-weight: bold;
+    background-color: rgb(223, 18, 18);
+    top: 30px;
+    right: -200px;
+    text-align: left;
+    z-index: 2;
+    transition: right 0.3s ease;
   }
+  
+  .menu.open {
+    right: 0;
+}
+
+
+
+/*----wrapper-----*/
   .wrapper{
-    margin-top: 15px;
+    margin-top: 7em;
   }
   .box{
     padding: 10px;
@@ -411,7 +484,7 @@ transition: 0.5s;
   .update p{
     margin: 10px 0;
   }
-  hr{
+ .box hr{
     width: 30%;
     margin: auto;
   }
@@ -439,6 +512,9 @@ transition: 0.5s;
     justify-content: flex-start;
     text-align: left;
   }
+  .edition h3{
+    margin-bottom: 10px;
+  }
 
   /*-----modal---*/
   .modal-wrapper{
@@ -461,5 +537,27 @@ transition: 0.5s;
   .special h5{
     margin: 0;
   }
-  
+ 
+  .btn{
+   flex-direction: column;
+   align-items: center;
+  }
+  .btn button {
+    width: 100%;
+    margin: 5px 0;
+  }
+  .next{
+    display: flex;
+flex-direction: row;
+     width: 100%;
+    
+  }
+  .Continue{
+    margin-left: 10px;
+  }
+  .thank-you-content{
+    width: 90%;
+    margin: auto;
+    margin-top:  105px; 
+  }
 }

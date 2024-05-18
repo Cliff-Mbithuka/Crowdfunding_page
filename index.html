@@ -16,19 +16,22 @@
   </head>
   <body>
     <div class="background-image">
-      <img src="images/image-hero-desktop.jpg" alt="" />
+      <img src="images/image-hero-desktop.jpg" alt="" class="desktop" />
+      <img src="images/image-hero-mobile.jpg" alt="" class="mobile" />
     </div>
     <div class="container">
       <div class="header">
-        <div class="logo">
-          <img src="images/logo.svg" alt="" />
-        </div>
-        <div class="menu">
-          <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Discover</a></li>
-            <li><a href="#">Get Started</a></li>
-          </ul>
+        <div><img src="images/logo.svg" alt="" /></div>
+        <div>
+          <div class="menu" id="sidemenu">
+            <img src="images/icon-close-menu.svg" alt="" class="close" id="closeMenu"/>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Discover</a></li>
+              <li><a href="#">Get Started</a></li>
+            </ul>
+          </div>
+          <img src="images/icon-hamburger.svg" alt="" class="open" id="menuToggle" />
         </div>
       </div>
       <div class="wrapper">
@@ -155,7 +158,7 @@
         </p>
         <div class="pledge-box">
           <div class="pledge box-one">
-            <div>
+            <div class="left">
               <label for="account"
                 ><input
                   id="account"
@@ -163,9 +166,9 @@
                   name="account-type"
                   class="inline"
               /></label>
-            </div>
-            <div class="left">
               <h4>Pledge with no reward</h4>
+            </div>
+            <div>
               <p>
                 Choose to support us without a reward if you simply believe in
                 our project. As a backer,you will be signed up to receive
@@ -229,12 +232,18 @@
                 <span>left</span>
               </div>
             </div>
-            <hr />
+
             <div class="below">
-              <div><p>Enter Your Pledge</p></div>
+              <hr />
+
               <div class="btn">
-                <button>$ <span>25 </span></button>
-                <button class="Continue" id="openThankYouBtn">Continue</button>
+                <p>Enter Your Pledge</p>
+                <div class="next">
+                  <button class="money">$ <span>25 </span></button>
+                  <button class="Continue" id="openThankYouBtn">
+                    Continue
+                  </button>
+                </div>
               </div>
             </div>
           </div>
