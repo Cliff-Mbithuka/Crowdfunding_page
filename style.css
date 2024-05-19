@@ -21,7 +21,7 @@ body {
  
 }
 body.fixed {
-  overflow: hidden; /* Prevent scrolling */
+  overflow: hidden; 
 }
 
 /*------------Background-image--------*/
@@ -311,7 +311,6 @@ button img:hover{
   cursor: pointer;
 }
 .pledge {
-    /* display: flex; */
   padding: 20px;
   border: solid 1px var(--Dark-gray);
   border-radius: 5px;
@@ -323,7 +322,6 @@ button img:hover{
     border: solid 2px var(--Dark-cyan);
 }
 .left{
-    /* margin-left: 20px; */
     display: flex;
 }
 .left h4{
@@ -341,15 +339,16 @@ flex-direction:  column;
   display: flex;
   align-items: center;
 }
+.inline{
+  cursor: pointer;
+}
 .remain-modal{
     display: flex;
-    
 }
 .special{
   margin-left: 10px;
   flex-direction: column;
 }
-
 .remain-modal h4:hover{
 color: var(--Moderate-cyan);
 cursor: pointer;
@@ -362,29 +361,21 @@ font-weight: bold;
 .remain-modal span{
     margin-left: 10px;
 }
-/* .centre{
-    margin-left: 20px;
-} */
 .box-three{
     flex-direction: column;
 }
 .below{
   margin-top: 2em;
-    /* display: flex;
-    flex-direction: row; */
-    /* justify-content: space-between;
-    align-items: center; */
+  /* display: none; */
 }
 
 .below button{
- 
 padding: 10px;
 border-radius: 40px;
 margin-top: 15px;
 border: none;
 color: var(--Dark-gray);
 transition: 0.5s;
-
 }
 .btn{
   display: flex;
@@ -408,7 +399,6 @@ transition: 0.5s;
     color: white;
     border: none;
 }
-
 .box-four{
     opacity: 0.3;
 }
@@ -425,14 +415,12 @@ transition: 0.5s;
     display: none;
   }
   .container{
-    margin-top: 2em ;
-    
+    margin-top: 1em ;
   }
 
   /*-------menu-----------*/
   .menu ul li{
     display: block;
-   
   }
   .menu ul li a {
     color: var(--Dark-gray);
@@ -443,21 +431,19 @@ transition: 0.5s;
     margin: 10px;
     float: right;
   }
-
   .menu{
     width: 150px;
-    height: 150px;
+    height: 130px;
     position: fixed;
-  
     font-weight: bold;
-    background-color: rgb(223, 18, 18);
-    top: 30px;
+    background-color: white;
+    top: 10px;
     right: -200px;
     text-align: left;
+    border-radius: 5px;
     z-index: 2;
     transition: right 0.3s ease;
   }
-  
   .menu.open {
     right: 0;
 }
@@ -479,7 +465,6 @@ transition: 0.5s;
   }
   .update{
     flex-direction: column;
-    
   }
   .update p{
     margin: 10px 0;
@@ -501,11 +486,9 @@ transition: 0.5s;
  .number{
   display: flex;
   flex-direction: column;
-  
  }
  .remain{
   margin-bottom: 10px;
- 
  }
   .edition{
     flex-direction: column;
@@ -537,7 +520,6 @@ transition: 0.5s;
   .special h5{
     margin: 0;
   }
- 
   .btn{
    flex-direction: column;
    align-items: center;
@@ -550,7 +532,6 @@ transition: 0.5s;
     display: flex;
 flex-direction: row;
      width: 100%;
-    
   }
   .Continue{
     margin-left: 10px;
