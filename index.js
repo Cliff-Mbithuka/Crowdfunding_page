@@ -5,7 +5,7 @@ const thankYouPage = document.getElementById("thankYouPage");
 const closeThankYouBtn = document.getElementById("closeThankYouBtn");
 const openThankYouBtn = document.getElementsByClassName("Continue");
 const pledge = document.getElementsByClassName("pledge");
-const closeMenu = document.getElementById("closeMenu");
+const deleteMenu = document.getElementById("close_Menu");
 const menuToggle = document.getElementById("menuToggle");
 const sideMenu = document.getElementById("sidemenu");
 const selectReward = document.getElementsByClassName("select");
@@ -38,12 +38,18 @@ closeThankYouBtn.onclick = function () {
 };
 
 //menu
-menuToggle.addEventListener("click", () => {
-  sideMenu.style.display = "block";
+menuToggle.addEventListener('click', () => {
+  menuToggle.style.display = 'none';
+  deleteMenu.style.display = 'block';
+  sideMenu.style.display = 'block';
 });
-closeMenu.addEventListener("click", () => {
-  sideMenu.style.display = "none";
+
+deleteMenu.addEventListener('click', () => {
+  deleteMenu.style.display = 'none';
+  menuToggle.style.display = 'block';
+  sideMenu.style.display = 'none';
 });
+
 
 //select Reward
 for (let button of selectReward) {
@@ -56,7 +62,7 @@ for (let button of selectReward) {
   // Add event listeners to radio buttons
   for (let i = 0; i < clickRadio.length; i++) {
     clickRadio[i].addEventListener("change", () => {
-      
+
       for (let j = 0; j < belowSections.length; j++) {
         belowSections[j].style.display = "none";
       }
@@ -67,3 +73,18 @@ for (let button of selectReward) {
     });
   }
 
+                 // Days counter
+  function updateCountdown() {
+    const today = new Date();
+    const targetDate = new Date(today.getFullYear(), 11, 17);
+    const difference = targetDate - today;
+    const daysLeft = Math.ceil(difference / (1000 * 60 * 60 * 24));
+    document.getElementById('daysLeft').textContent = daysLeft;
+  }
+  updateCountdown();
+
+  setInterval(updateCountdown, 1000 * 60 * 60 * 24);
+
+
+
+  

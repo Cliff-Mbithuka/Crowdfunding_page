@@ -66,6 +66,9 @@ body.fixed {
   color: white;
  
 }
+/* .close-menu{
+  background: url('./images/icon-close-menu.svg')no-repeat transparent center;
+} */
 /* .menu ul li::after {
   content: "";
   width: 0%;
@@ -424,7 +427,7 @@ button img:hover {
   /*-------menu-----------*/
   .menu ul li {
     display: block;
-    padding: 5px;
+    padding: 8px;
   }
   .open, .close{
     display: block;
@@ -432,9 +435,8 @@ button img:hover {
   }
   .close {
     position: absolute;
-    top: 5px;
+    display: none;
     right: 20px;
-    background-color: #888;
 }
   .menu{
     position: absolute;
@@ -444,6 +446,7 @@ button img:hover {
     display: none;
     background-color: white;
     border-radius: 5px;
+    z-index: 99;
   }
    
   .menu ul li a {
