@@ -18,10 +18,9 @@ body {
   display: flex;
   justify-content: center;
   background-color: rgb(253, 250, 246);
- 
 }
 body.fixed {
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 /*------------Background-image--------*/
@@ -33,10 +32,10 @@ body.fixed {
   height: 350px;
   z-index: -1;
 }
-.mobile{
+.mobile {
   display: none;
 }
-.desktop{
+.desktop {
   display: block;
 }
 .background-image img {
@@ -49,7 +48,6 @@ body.fixed {
   width: 100%;
   margin: 45px 0;
   max-width: 1100px;
-  
 }
 /*-------Header------*/
 .header {
@@ -66,7 +64,7 @@ body.fixed {
 .menu ul li a {
   text-decoration: none;
   color: white;
-  display: inline-block;
+ 
 }
 .menu ul li::after {
   content: "";
@@ -81,7 +79,8 @@ body.fixed {
 .menu ul li:hover::after {
   width: 100%;
 }
-.open, .close{
+.open,
+.close {
   display: none;
 }
 
@@ -146,7 +145,7 @@ body.fixed {
   margin-left: 10px;
   transition: 0.6s;
 }
-.bottom:hover{
+.bottom:hover {
   background-color: white;
   color: var(--Dark-cyan);
   font-weight: bold;
@@ -161,7 +160,7 @@ button img {
   width: auto;
   height: 100%;
 }
-button img:hover{
+button img:hover {
   background-attachment: var(--Dark-cyan);
 }
 
@@ -194,9 +193,7 @@ button img:hover{
   text-align: left;
   padding: 15px;
 }
-/* .three p {
-  margin: 20px 0;
-} */
+
 .thin {
   border: solid 1px var(--Dark-gray);
   padding: 10px;
@@ -208,7 +205,7 @@ button img:hover{
   color: white;
   border: transparent;
 }
-.edition{
+.edition {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
@@ -216,7 +213,7 @@ button img:hover{
 .edition p {
   color: var(--Moderate-cyan);
 }
-.first{
+.first {
   margin-top: 15px;
 }
 .third {
@@ -225,13 +222,13 @@ button img:hover{
 .second {
   margin: 20px 0;
 }
- .remain {
+.remain {
   display: flex;
   align-items: center;
-} 
+}
 .remain span {
   margin-left: 10px;
-} 
+}
 .first button,
 .second button {
   background-color: var(--Moderate-cyan);
@@ -246,64 +243,70 @@ button img:hover{
   background-color: var(--Dark-gray);
   color: white;
 }
-.number{
+.number {
   display: flex;
   justify-content: space-between;
   margin-top: 15px;
 }
 
 /* modal */
-.modal, .thank-you {
-    display: none;
-    position: fixed;
-    z-index: 1; 
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%;
-    overflow: auto; 
-    background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0,0.4); 
-  }
-  .modal-wrapper, .thank-you-content {
-    background-color: #fefefe;
-    margin: 12% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 50%; 
-    border-radius: 5px;
-  }
-  .thank-you-content{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
-    width: 470px;
-    padding: 10px;
-  }
-  .thank-you-content h2{
-    margin: 10px 0;
-  }
-  .thank-you-content img{
-    margin-top: 10px;
-  }
-  .thank-you-content button{
-    margin: 14px 0;
-    padding: 10px;
-    border-radius: 40px;
-    width: 30%;
-    color: white;
-    background-color: var(--Moderate-cyan);
-    border: none;
-    transition: 0.5s;
-    cursor: pointer;
-  }
-  .thank-you-content button:hover{
-    background-color: var(--Dark-cyan);
-  }
+.modal,
+.thank-you {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.modal-wrapper,
+.thank-you-content {
+  background-color: #fefefe;
+  
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+  border-radius: 5px;
+}
+.modal-wrapper{
+  margin: 2% auto;
+}
+.thank-you-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  width: 470px;
+  padding: 10px;
+  margin: 12% auto;
+}
+.thank-you-content h2 {
+  margin: 10px 0;
+}
+.thank-you-content img {
+  margin-top: 10px;
+}
+.thank-you-content button {
+  margin: 14px 0;
+  padding: 10px;
+  border-radius: 40px;
+  width: 30%;
+  color: white;
+  background-color: var(--Moderate-cyan);
+  border: none;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.thank-you-content button:hover {
+  background-color: var(--Dark-cyan);
+}
 .modal-wrapper p {
-  margin: 15px 0;
+  margin: 5px 0;
   color: var(--Dark-gray);
 }
 .close-icon {
@@ -317,228 +320,228 @@ button img:hover{
   margin-bottom: 10px;
   transition: 0.5s;
 }
-.pledge:hover{
-    cursor: pointer;
-    border: solid 2px var(--Dark-cyan);
+.pledge:hover {
+  cursor: pointer;
+  border: solid 2px var(--Dark-cyan);
 }
-.left{
-    display: flex;
+.left {
+  display: flex;
 }
-.left h4{
+.left h4 {
   margin-left: 10px;
 }
-.left h4:hover{
+.left h4:hover {
   color: var(--Moderate-cyan);
-cursor: pointer;
+  cursor: pointer;
 }
-.upper{
-display: flex;
-flex-direction:  column;
+.upper {
+  display: flex;
+  flex-direction: column;
 }
-.label{
+.label {
   display: flex;
   align-items: center;
 }
-.inline{
+.inline {
   cursor: pointer;
 }
-.remain-modal{
-    display: flex;
+.remain-modal {
+  display: flex;
 }
-.special{
+.special {
   margin-left: 10px;
   flex-direction: column;
 }
-.remain-modal h4:hover{
-color: var(--Moderate-cyan);
-cursor: pointer;
+.remain-modal h4:hover {
+  color: var(--Moderate-cyan);
+  cursor: pointer;
 }
-.remain-modal h5{
-    margin-top: 5px;
-    color: var(--Moderate-cyan);
-font-weight: bold;
+.remain-modal h5 {
+  margin-top: 5px;
+  color: var(--Moderate-cyan);
+  font-weight: bold;
 }
-.remain-modal span{
-    margin-left: 10px;
+.remain-modal span {
+  margin-left: 10px;
 }
-.box-three{
-    flex-direction: column;
+.box-three {
+  flex-direction: column;
 }
-.below{
+.below {
   margin-top: 2em;
-  /* display: none; */
+  display: none;
 }
 
-.below button{
-padding: 10px;
-border-radius: 40px;
-margin-top: 15px;
-border: none;
-color: var(--Dark-gray);
-transition: 0.5s;
+.below button {
+  padding: 10px;
+  border-radius: 40px;
+  margin-top: 15px;
+  border: none;
+  color: var(--Dark-gray);
+  transition: 0.5s;
 }
-.btn{
+.btn {
   display: flex;
   justify-content: space-between;
 }
-.below button span{
-    margin-left: 10px;
-    color: var(--Black);
-    font-weight: bold;
+.below button span {
+  margin-left: 10px;
+  color: var(--Black);
+  font-weight: bold;
 }
-.below button:hover{
-    cursor: pointer;
-    border: solid 2px var(--Moderate-cyan);
+.below button:hover {
+  cursor: pointer;
+  border: solid 2px var(--Moderate-cyan);
 }
-.Continue{
-    margin-left: 10px;
-    transition: 0.5s;
+.Continue {
+  margin-left: 10px;
+  transition: 0.5s;
 }
-.Continue:hover{
-    background-color: var(--Dark-cyan);
-    color: white;
-    border: none;
+.Continue:hover {
+  background-color: var(--Dark-cyan);
+  color: white;
+  border: none;
 }
-.box-four{
-    opacity: 0.3;
+.box-four {
+  opacity: 0.3;
 }
 
 
 @media (max-width: 768px) {
-  .background-image{
-    height: 250px
+  .background-image {
+    height: 250px;
   }
-  .mobile{
+  .mobile {
     display: block;
   }
-  .desktop{
+  .desktop {
     display: none;
   }
-  .container{
-    margin-top: 1em ;
+  .container {
+    margin-top: 1em;
   }
 
   /*-------menu-----------*/
-  .menu ul li{
+  .menu ul li {
     display: block;
-  }
-  .menu ul li a {
-    color: var(--Dark-gray);
+    padding: 5px;
   }
   .open, .close{
     display: block;
     cursor: pointer;
-    margin: 10px;
-    float: right;
   }
-  .menu{
-    width: 150px;
-    height: 130px;
-    position: fixed;
-    font-weight: bold;
-    background-color: white;
-    top: 10px;
-    right: -200px;
-    text-align: left;
-    border-radius: 5px;
-    z-index: 2;
-    transition: right 0.3s ease;
-  }
-  .menu.open {
-    right: 0;
+  .close {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    background-color: #888;
 }
+  .menu{
+    position: absolute;
+    right: 35px;
+    width: 80%;
+    margin-top: 2em;
+    display: none;
+    background-color: white;
+    border-radius: 5px;
+  }
+   
+  .menu ul li a {
+    color: var(--Black);
+    font-weight: 400;
+    padding-left: 7px;
+  }
+  
 
-
-
-/*----wrapper-----*/
-  .wrapper{
+  /*----wrapper-----*/
+  .wrapper {
     margin-top: 7em;
   }
-  .box{
+  .box {
     padding: 10px;
   }
-  .one p{
+  .one p {
     margin-top: 10px;
   }
-  .top{
+  .top {
     flex: 2;
   }
-  .update{
+  .update {
     flex-direction: column;
   }
-  .update p{
+  .update p {
     margin: 10px 0;
   }
- .box hr{
+  .box hr {
     width: 30%;
     margin: auto;
   }
-  .progress-bar{
+  .progress-bar {
     width: 80%;
     margin: auto;
   }
-  .thin{
+  .thin {
     display: flex;
     align-items: flex-start;
     text-align: left;
     flex-direction: column;
   }
- .number{
-  display: flex;
-  flex-direction: column;
- }
- .remain{
-  margin-bottom: 10px;
- }
-  .edition{
+  .number {
+    display: flex;
+    flex-direction: column;
+  }
+  .remain {
+    margin-bottom: 10px;
+  }
+  .edition {
     flex-direction: column;
     justify-content: flex-start;
     text-align: left;
   }
-  .edition h3{
+  .edition h3 {
     margin-bottom: 10px;
   }
 
   /*-----modal---*/
-  .modal-wrapper{
+  .modal-wrapper {
     width: 90%;
   }
-  .upper{
+  .upper {
     display: flex;
     flex-direction: column;
   }
-  
-  .special{
+
+  .special {
     flex-direction: column;
     margin-left: 10px;
     display: flex;
     padding: 0;
   }
-  .special h4{
+  .special h4 {
     margin-bottom: 5px;
   }
-  .special h5{
+  .special h5 {
     margin: 0;
   }
-  .btn{
-   flex-direction: column;
-   align-items: center;
+  .btn {
+    flex-direction: column;
+    align-items: center;
   }
   .btn button {
     width: 100%;
     margin: 5px 0;
   }
-  .next{
+  .next {
     display: flex;
-flex-direction: row;
-     width: 100%;
+    flex-direction: row;
+    width: 100%;
   }
-  .Continue{
+  .Continue {
     margin-left: 10px;
   }
-  .thank-you-content{
+  .thank-you-content {
     width: 90%;
     margin: auto;
-    margin-top:  105px; 
+    margin-top: 105px;
   }
 }

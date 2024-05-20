@@ -9,6 +9,8 @@ const closeMenu = document.getElementById("closeMenu");
 const menuToggle = document.getElementById("menuToggle");
 const sideMenu = document.getElementById("sidemenu");
 const selectReward = document.getElementsByClassName("select");
+const clickRadio = document.getElementsByName("account-type");
+const belowSections = document.getElementsByClassName("below");
 
 
 
@@ -37,10 +39,10 @@ closeThankYouBtn.onclick = function () {
 
 //menu
 menuToggle.addEventListener("click", () => {
-  sideMenu.classList.add("open");
+  sideMenu.style.display = "block";
 });
 closeMenu.addEventListener("click", () => {
-  sideMenu.classList.remove("open");
+  sideMenu.style.display = "none";
 });
 
 //select Reward
@@ -51,4 +53,17 @@ for (let button of selectReward) {
   });
 }
 
+  // Add event listeners to radio buttons
+  for (let i = 0; i < clickRadio.length; i++) {
+    clickRadio[i].addEventListener("change", () => {
+      
+      for (let j = 0; j < belowSections.length; j++) {
+        belowSections[j].style.display = "none";
+      }
+      
+      if (clickRadio[i].checked) {
+        belowSections[i].style.display = "block";
+      }
+    });
+  }
 
